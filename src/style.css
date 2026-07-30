@@ -124,6 +124,10 @@ nav {
     flex: 1;
     display: flex;
     justify-content: center;
+    padding: 15px;
+    border: 3px solid #C9A7E2;
+    border-radius: 320px 320px 40px 40px;
+    background-color: #F7EFFA;
 }
 
 .hero-image img {
@@ -172,6 +176,43 @@ nav {
     font-size: 1.05rem;
 }
 
+
+.section-label {
+    color: #D08DB4;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.quotes-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.quotes blockquote {
+    position: relative;
+    flex: 1;
+    max-width: 350px;
+    padding: 45px 30px 35px;
+    background-color: #FFF9FF;
+    border-radius: 25px;
+    color: #806D89;
+    font-style: italic;
+    box-shadow: 0 8px 25px rgba(142, 104, 173, 0.08);
+    border: 1px solid #E8D7F2;
+}
+
+.quote-mark {
+    display: block;
+    color: #C9A7E2;
+    font-family: Georgia, serif;
+    font-size: 4rem;
+    line-height: 0.5;
+    margin-bottom: 20px;
+}
 
 /* =========================
    RECOMMENDED FLOWERS
