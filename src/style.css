@@ -51,9 +51,92 @@ nav {
 }
 
 .logo {
-    font-size: 1.7rem;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
     color: #8E68AD;
+    font-family: "DM Serif Display", serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #A98BC6;
+}
+
+.ribbon {
+    position: relative;
+    width: 34px;
+    height: 32px;
+    display: inline-block;
+}
+
+/* Left loop */
+.ribbon::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 13px;
+    left: 1px;
+    top: 5px;
+    background: linear-gradient(135deg, #B996D2, #A98BC6);
+    border-radius: 10px 4px 10px 4px;
+    transform: rotate(-28deg);
+}
+
+/* Right loop */
+.ribbon::after {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 13px;
+    right: 1px;
+    top: 5px;
+    background: linear-gradient(225deg, #C9A7E2, #A98BC6);
+    border-radius: 4px 10px 4px 10px;
+    transform: rotate(28deg);
+}
+
+/* Center knot */
+.ribbon-center {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: #8E68AD;
+    border-radius: 50%;
+    top: 8px;
+    left: 12px;
+    z-index: 2;
+}
+
+/* Left ribbon tail */
+.ribbon-center::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 17px;
+    background-color: #A98BC6;
+    left: -7px;
+    top: 6px;
+    clip-path: polygon(0 0, 100% 10%, 75% 100%, 45% 75%, 0 100%);
+    transform: rotate(8deg);
+}
+
+/* Right ribbon tail */
+.ribbon-center::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 17px;
+    background-color: #C9A7E2;
+    right: -7px;
+    top: 6px;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 55% 75%, 25% 100%);
+    transform: rotate(-8deg);
 }
 
 .menu {
@@ -63,9 +146,10 @@ nav {
 }
 
 .menu a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
     color: #6B4A7A;
-    font-size: 1rem;
-    transition: color 0.3s ease;
 }
 
 .menu a:hover {
@@ -92,8 +176,10 @@ nav {
 }
 
 .hero-content h1 {
-    font-size: 4rem;
-    line-height: 1.1;
+    font-family: "DM Serif Display", serif;
+    font-size: 4.2rem;
+    line-height: 1.05;
+    font-weight: 400;
     color: #8E68AD;
     margin-bottom: 25px;
 }
@@ -133,7 +219,7 @@ nav {
 .hero-image img {
     width: 100%;
     max-width: 550px;
-    height: 600px;
+    height: 650px;
     object-fit: cover;
     border-radius: 300px 300px 30px 30px;
 }
@@ -283,6 +369,79 @@ nav {
     font-weight: bold;
 }
 
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews {
+    padding: 100px 7%;
+    text-align: center;
+    background-color: #FFF9FF;
+}
+
+.reviews .section-label {
+    color: #D08DB4;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.reviews h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #8E68AD;
+    margin-bottom: 50px;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.review-card {
+    flex: 1;
+    max-width: 350px;
+    padding: 40px 30px;
+    background-color: #F7EFFA;
+    border: 1px solid #E8D7F2;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(142, 104, 173, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(142, 104, 173, 0.13);
+}
+
+.stars {
+    color: #D8A1C4;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.review-text {
+    color: #806D89;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.review-card h3 {
+    color: #8E68AD;
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+}
+
+.review-card span {
+    color: #A58CA9;
+    font-size: 0.85rem;
+}
+
 
 /* =========================
    CONTACT
@@ -403,6 +562,14 @@ footer > p {
     .flower-card {
         min-width: 280px;
     }
+
+    .reviews-container {
+        flex-wrap: wrap;
+    }
+
+    .review-card {
+        min-width: 280px;
+    }
 }
 
 
@@ -465,6 +632,163 @@ footer > p {
 
     .quotes blockquote,
     .flower-card,
+    .contact-info > div {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .flower-card img {
+        height: 280px;
+    }
+
+    .reviews {
+        padding: 70px 5%;
+    }
+
+    .reviews h2 {
+        font-size: 2rem;
+    }
+
+    .reviews-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 8px;
+    border: 1px solid #D8B8E8;
+    border-radius: 50%;
+    background-color: #F7EFFA;
+
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 0 auto;
+
+    background-color: #8E68AD;
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+
+        position: absolute;
+        top: 55px;
+        right: 0;
+
+        flex-direction: column;
+        gap: 0;
+
+        width: 190px;
+        padding: 10px;
+
+        background-color: #FFF9FF;
+        border: 1px solid #E8D7F2;
+        border-radius: 18px;
+
+        box-shadow: 0 10px 30px rgba(142, 104, 173, 0.15);
+
+        z-index: 100;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        display: block;
+        padding: 12px 15px;
+        font-size: 0.95rem;
+        border-radius: 12px;
+    }
+
+    .menu a:hover {
+        background-color: #F7EFFA;
+        color: #8E68AD;
+    }
+
+    /* Rest of your mobile styles */
+    
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        height: 400px;
+        border-radius: 200px 200px 20px 20px;
+    }
+
+    .quotes,
+    .recommended,
+    .reviews,
+    .contact {
+        padding: 70px 5%;
+    }
+
+    .quotes h2,
+    .recommended h2,
+    .reviews h2,
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .quotes-container,
+    .flowers-container,
+    .reviews-container,
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quotes blockquote,
+    .flower-card,
+    .review-card,
     .contact-info > div {
         max-width: 100%;
         width: 100%;

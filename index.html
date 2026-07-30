@@ -1,199 +1,221 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./src/assets/img/logo.JPG" />
     <title>The Flower Room</title>
 
-    <link rel="stylesheet" href="./src/style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+
+  <body>
     <!-- Header -->
     <header>
-        <nav>
-            <a href="index.html" class="logo">The Flower Room</a>
+      <nav>
+        <a href="index.html" class="logo">
+          <span class="ribbon">
+            <span class="ribbon-center"></span>
+          </span>
 
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="flowers.html">Flowers</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+          <span>The Flower Room</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="flowers.html">Flowers</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-
     <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Flowers that make every moment beautiful</h1>
 
-        <!-- Hero Section -->
-        <section class="hero">
+          <p>
+            Discover beautiful flowers carefully selected to make every occasion
+            special.
+          </p>
 
-            <div class="hero-content">
-                <h1>Flowers that make every moment beautiful</h1>
+          <a href="flowers.html" class="btn">Explore Flowers</a>
+        </div>
 
-                <p>
-                    Discover beautiful flowers carefully selected
-                    to make every occasion special.
-                </p>
+        <div class="hero-image">
+          <img
+            src="./src/assets/img/hero-flowers.jpg.jpg"
+            alt="Beautiful flower bouquet"
+          />
+        </div>
+      </section>
 
-                <a href="flowers.html" class="btn">Explore Flowers</a>
-            </div>
+      <!-- Quotes Section -->
+      <section class="quotes">
+        <p class="section-label">A little flower poetry</p>
 
-            <div class="hero-image">
-                <img src="./src/assets/img/hero-flowers.jpg.jpg"
-                     alt="Beautiful flower bouquet">
-            </div>
+        <h2>Flowers Speak Without Words</h2>
 
-        </section>
+        <div class="quotes-container">
+          <blockquote>
+            <span class="quote-mark">“</span>
+            <p>"The earth laughs in flowers." — Ralph Waldo Emerson</p>
+          </blockquote>
 
-
-        <!-- Quotes Section -->
-        <section class="quotes">
-                <p class="section-label">A little flower poetry</p>
-
-            <h2>Flowers Speak Without Words</h2>
-
-            <div class="quotes-container">
-
-                <blockquote>
-                    <span class="quote-mark">“</span>
-                    <p>"The earth laughs in flowers." — Ralph Waldo Emerson</p>
-                </blockquote>
-
-                <blockquote>
-                    <span class="quote-mark">“</span>
-                    <p>"Flowers always make people better, happier, and more helpful; they are sunshine, food, and medicine for the soul." — Luther Burbank</p>
-                </blockquote>
-
-                <blockquote>
-                    <span class="quote-mark">“</span>
-                    <p>"I must have flowers, always, and always." — Claude Monet</p>
-                </blockquote>
-
-            </div>
-
-        </section>
-
-
-        <!-- Recommended Flowers -->
-        <section class="recommended">
-
-            <h2>Recommended Flowers</h2>
-
+          <blockquote>
+            <span class="quote-mark">“</span>
             <p>
-                Discover some of our most loved flowers and bouquets.
+              "Flowers always make people better, happier, and more helpful;
+              they are sunshine, food, and medicine for the soul." — Luther
+              Burbank
+            </p>
+          </blockquote>
+
+          <blockquote>
+            <span class="quote-mark">“</span>
+            <p>"I must have flowers, always, and always." — Claude Monet</p>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Recommended Flowers -->
+      <section class="recommended">
+        <h2>Recommended Flowers</h2>
+
+        <p>Discover some of our most loved flowers and bouquets.</p>
+
+        <div class="flowers-container">
+          <article class="flower-card">
+            <img src="./src/assets/img/red-roses.jpg" alt="Red roses" />
+
+            <h3>Red Roses</h3>
+
+            <p>Elegant roses perfect for expressing love and appreciation.</p>
+
+            <span>$25</span>
+          </article>
+
+          <article class="flower-card">
+            <img src="./src/assets/img/tulips.jpg" alt="Pink tulips" />
+
+            <h3>Pink Tulips</h3>
+
+            <p>Fresh and cheerful tulips for a beautiful everyday gift.</p>
+
+            <span>$20</span>
+          </article>
+
+          <article class="flower-card">
+            <img src="./src/assets/img/sunflowers.jpg" alt="Sunflowers" />
+
+            <h3>Sunflowers</h3>
+
+            <p>Bright sunflowers that bring warmth and happiness.</p>
+
+            <span>$18</span>
+          </article>
+        </div>
+
+        <a href="flowers.html" class="btn">See More Flowers</a>
+      </section>
+      <!-- Reviews Section -->
+      <section class="reviews">
+        <p class="section-label">Kind words from our customers</p>
+
+        <h2>What Our Customers Say</h2>
+
+        <div class="reviews-container">
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+
+            <p class="review-text">
+              The flowers were absolutely beautiful and arrived fresh and
+              carefully arranged.
             </p>
 
-            <div class="flowers-container">
+            <h3>Emma R.</h3>
+            <span>Happy Customer</span>
+          </article>
 
-                <article class="flower-card">
-                    <img src="./src/assets/img/red-roses.jpg"
-                         alt="Red roses">
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
 
-                    <h3>Red Roses</h3>
-
-                    <p>
-                        Elegant roses perfect for expressing love
-                        and appreciation.
-                    </p>
-
-                    <span>$25</span>
-                </article>
-
-
-                <article class="flower-card">
-                    <img src="./src/assets/img/tulips.jpg"
-                         alt="Pink tulips">
-
-                    <h3>Pink Tulips</h3>
-
-                    <p>
-                        Fresh and cheerful tulips for a beautiful
-                        everyday gift.
-                    </p>
-
-                    <span>$20</span>
-                </article>
-
-
-                <article class="flower-card">
-                    <img src="./src/assets/img/sunflowers.jpg"
-                         alt="Sunflowers">
-
-                    <h3>Sunflowers</h3>
-
-                    <p>
-                        Bright sunflowers that bring warmth
-                        and happiness.
-                    </p>
-
-                    <span>$18</span>
-                </article>
-
-            </div>
-
-            <a href="flowers.html" class="btn">See More Flowers</a>
-
-        </section>
-
-
-        <!-- Contact Section -->
-        <section class="contact">
-
-            <h2>Get In Touch</h2>
-
-            <p>
-                Have a question or want to order a special bouquet?
-                Contact us.
+            <p class="review-text">
+              I ordered a bouquet for my sister and she loved it. Everything was
+              perfect!
             </p>
 
-            <div class="contact-info">
+            <h3>Sophia M.</h3>
+            <span>Happy Customer</span>
+          </article>
 
-                <div>
-                    <h3>Phone</h3>
-                    <a href="tel:+389XXXXXXXX">+389 XX XXX XXX</a>
-                </div>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
 
-                <div>
-                    <h3>Email</h3>
-                    <a href="mailto:hello@flowershop.com">
-                        hello@flowershop.com
-                    </a>
-                </div>
+            <p class="review-text">
+              Such a lovely experience. The flowers were even prettier than I
+              expected.
+            </p>
 
-                <div>
-                    <h3>Location</h3>
-                    <p>Skopje, Macedonia</p>
-                </div>
+            <h3>Olivia K.</h3>
+            <span>Happy Customer</span>
+          </article>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section class="contact">
+        <h2>Get In Touch</h2>
 
-            </div>
+        <p>Have a question or want to order a special bouquet? Contact us.</p>
 
-            <a href="contact.html" class="btn">Contact Us</a>
+        <div class="contact-info">
+          <div>
+            <h3>Phone</h3>
+            <a href="tel:+389XXXXXXXX">+389 XX XXX XXX</a>
+          </div>
 
-        </section>
+          <div>
+            <h3>Email</h3>
+            <a href="mailto:hello@flowershop.com"> hello@flowershop.com </a>
+          </div>
 
+          <div>
+            <h3>Location</h3>
+            <p>Skopje, Macedonia</p>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn">Contact Us</a>
+      </section>
     </main>
-
 
     <!-- Footer -->
     <footer>
+      <div class="footer-content">
+        <h2>The Flower Room</h2>
 
-        <div class="footer-content">
-            <h2>The Flower Room</h2>
+        <p>Flowers for every special moment.</p>
+      </div>
 
-            <p>
-                Flowers for every special moment.
-            </p>
-        </div>
-
-        <p>&copy; 2026 The Flower Room. All rights reserved.</p>
-
+      <p>&copy; 2026 The Flower Room. All rights reserved.</p>
     </footer>
 
-
     <script src="./src/app.js"></script>
-
-</body>
+  </body>
 </html>
