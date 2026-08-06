@@ -1,0 +1,19 @@
+ <script>
+  
+
+ 
+const params = new URLSearchParams(window.location.search);
+ 
+if (params.get("checkout") === "1") {
+  const orderSummary = localStorage.getItem("flowerRoomOrderSummary");
+  const messageField = document.querySelector("#message, [name='message']");
+ 
+  if (orderSummary && messageField) {
+    messageField.value = `Hi! I'd like to order:\n\n${orderSummary}`;
+  }
+ 
+  // Optional: clear the cart once the order has been handed off to the form
+  // localStorage.removeItem("flowerRoomCart");
+  // localStorage.removeItem("flowerRoomOrderSummary");
+}
+ 

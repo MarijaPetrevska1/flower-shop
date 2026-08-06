@@ -798,3 +798,381 @@ footer > p {
         height: 280px;
     }
 }
+
+/* =========================
+   PAGE HEADER (Flowers, About, Contact)
+========================= */
+ 
+.page-header {
+    padding: 80px 7% 50px;
+    text-align: center;
+    background-color: #F7EFFA;
+}
+ 
+.page-header h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #8E68AD;
+    margin-bottom: 15px;
+}
+ 
+.page-header p {
+    color: #806D89;
+    max-width: 550px;
+    margin: 0 auto;
+}
+ 
+ 
+/* =========================
+   PRODUCTS / FILTERS
+========================= */
+ 
+.products {
+    padding: 70px 7% 100px;
+    background-color: #FFF9FF;
+}
+ 
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 55px;
+}
+ 
+.filter-btn {
+    padding: 10px 22px;
+    background-color: transparent;
+    border: 1px solid #D8B8E8;
+    border-radius: 30px;
+    color: #8E68AD;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+ 
+.filter-btn:hover {
+    background-color: #F7EFFA;
+}
+ 
+.filter-btn.active {
+    background-color: #A98BC6;
+    border-color: #A98BC6;
+    color: #FFFFFF;
+}
+ 
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+ 
+.products-grid .flower-card {
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.products-grid .flower-card img {
+    height: 260px;
+}
+ 
+.products-grid .flower-card p {
+    flex-grow: 1;
+}
+ 
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20px 20px;
+    gap: 10px;
+}
+ 
+.card-footer span {
+    color: #D08DB4;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+ 
+.btn-small {
+    padding: 9px 20px;
+    font-size: 0.85rem;
+}
+ 
+.no-results {
+    text-align: center;
+    color: #806D89;
+    padding: 40px 0;
+}
+ 
+ 
+/* =========================
+   FOCUS STATES (accessibility)
+========================= */
+ 
+.menu a:focus-visible,
+.logo:focus-visible,
+.btn:focus-visible,
+.filter-btn:focus-visible,
+.menu-toggle:focus-visible {
+    outline: 2px solid #8E68AD;
+    outline-offset: 3px;
+}
+ 
+ 
+/* =========================
+   RESPONSIVE — PRODUCTS PAGE
+========================= */
+ 
+@media (max-width: 600px) {
+    .page-header {
+        padding: 60px 5% 40px;
+    }
+ 
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+ 
+    .products {
+        padding: 50px 5% 70px;
+    }
+ 
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+ 
+    .filters {
+        gap: 8px;
+    }
+ 
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+ 
+
+
+
+/* =========================
+   CART ICON (nav)
+========================= */
+ 
+.cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    line-height: 1;
+    margin-left: 10px;
+}
+ 
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D08DB4;
+    color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 50%;
+}
+ 
+.cart-icon.active {
+    color: #8E68AD;
+}
+ 
+ 
+/* =========================
+   CART PAGE
+========================= */
+ 
+.cart-page {
+    padding: 60px 7% 100px;
+    background-color: #FFF9FF;
+}
+ 
+.cart-empty {
+    text-align: center;
+    color: #806D89;
+    font-size: 1.1rem;
+    padding: 40px 0;
+}
+ 
+.cart-empty a {
+    color: #8E68AD;
+    font-weight: bold;
+    text-decoration: underline;
+}
+ 
+.cart-list {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+ 
+.cart-item {
+    display: grid;
+    grid-template-columns: 80px 1fr auto auto auto;
+    align-items: center;
+    gap: 18px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #E8D7F2;
+    border-radius: 16px;
+}
+ 
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+ 
+.cart-item-info h3 {
+    color: #8E68AD;
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+}
+ 
+.cart-item-info span {
+    color: #806D89;
+    font-size: 0.9rem;
+}
+ 
+.cart-item-qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+ 
+.qty-btn {
+    width: 26px;
+    height: 26px;
+    border: 1px solid #D8B8E8;
+    border-radius: 50%;
+    background-color: #F7EFFA;
+    color: #8E68AD;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+ 
+.qty-btn:hover {
+    background-color: #E8D7F2;
+}
+ 
+.cart-item-total {
+    color: #D08DB4;
+    font-weight: bold;
+    min-width: 60px;
+    text-align: right;
+}
+ 
+.cart-remove {
+    background: none;
+    border: none;
+    color: #C9A7E2;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+ 
+.cart-remove:hover {
+    color: #D08DB4;
+}
+ 
+.cart-summary {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #F7EFFA;
+    border-radius: 20px;
+    text-align: center;
+}
+ 
+.cart-summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8E68AD;
+    margin-bottom: 15px;
+}
+ 
+.cart-note {
+    color: #806D89;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+ 
+.checkout-btn {
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+ 
+ 
+/* =========================
+   RESPONSIVE — CART PAGE
+========================= */
+ 
+@media (max-width: 600px) {
+    .cart-page {
+        padding: 40px 5% 70px;
+    }
+ 
+    .cart-item {
+        grid-template-columns: 60px 1fr;
+        grid-template-areas:
+            "image info"
+            "image qty"
+            "image total";
+        row-gap: 8px;
+    }
+ 
+    .cart-item img {
+        grid-area: image;
+        width: 60px;
+        height: 60px;
+    }
+ 
+    .cart-item-info {
+        grid-area: info;
+    }
+ 
+    .cart-item-qty {
+        grid-area: qty;
+    }
+ 
+    .cart-item-total {
+        grid-area: total;
+        text-align: left;
+    }
+ 
+    .cart-remove {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+ 
+    .cart-item {
+        position: relative;
+    }
+}
+ 

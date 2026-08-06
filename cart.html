@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Review the items in your cart at The Flower Room before checking out." />
+    <link rel="icon" type="image/png" href="./src/assets/img/logo.JPG" />
+    <title>Your Cart — The Flower Room</title>
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ 
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+ 
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+ 
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <a href="index.html" class="logo">
+          <span class="ribbon">
+            <span class="ribbon-center"></span>
+          </span>
+ 
+          <span>The Flower Room</span>
+        </a>
+ 
+        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+ 
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="flowers.html">Flowers</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+ 
+        <a href="cart.html" class="cart-icon active" aria-label="View cart">
+          🛒
+          <span class="cart-count" hidden>0</span>
+        </a>
+      </nav>
+    </header>
+ 
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <p class="section-label">Your Selection</p>
+        <h1>Your Cart</h1>
+        <p>Review your flowers before checking out.</p>
+      </section>
+ 
+      <!-- Cart Section -->
+      <section class="cart-page">
+        <p class="cart-empty" hidden>
+          Your cart is empty.
+          <a href="flowers.html">Browse our flowers</a> to add something beautiful.
+        </p>
+ 
+        <div class="cart-list" hidden></div>
+ 
+        <div class="cart-summary" hidden>
+          <div class="cart-summary-row">
+            <span>Subtotal</span>
+            <span class="cart-subtotal">$0.00</span>
+          </div>
+          <p class="cart-note">Delivery details will be confirmed after checkout.</p>
+          <button class="btn checkout-btn">Proceed to Checkout</button>
+        </div>
+      </section>
+    </main>
+ 
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <h2>The Flower Room</h2>
+        <p>Flowers for every special moment.</p>
+      </div>
+ 
+      <p>&copy; 2026 The Flower Room. All rights reserved.</p>
+    </footer>
+ 
+    <script src="./src/app.js" defer></script>
+    <script src="./src/cart.js" defer></script>
+  </body>
+</html>
+ 

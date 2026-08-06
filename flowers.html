@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse the full collection at The Flower Room - roses, bouquets, potted plants and seasonal flowers for every occasion, delivered in Skopje."
+    />
+    <link rel="icon" type="image/png" href="./src/assets/img/logo.JPG" />
+    <title>Flowers — The Flower Room</title>
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ 
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+ 
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+ 
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <a href="index.html" class="logo">
+          <span class="ribbon">
+            <span class="ribbon-center"></span>
+          </span>
+ 
+          <span>The Flower Room</span>
+        </a>
+ 
+        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+ 
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="flowers.html" class="active">Flowers</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+ 
+        <a href="cart.html" class="cart-icon" aria-label="View cart">
+          🛒
+          <span class="cart-count" hidden>0</span>
+        </a>
+      </nav>
+    </header>
+ 
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <p class="section-label">Our Collection</p>
+        <h1>All Flowers</h1>
+        <p>
+          Browse our full range of fresh flowers and bouquets, hand-arranged
+          for every occasion.
+        </p>
+      </section>
+ 
+      <!-- Products Section -->
+      <section class="products">
+        <!-- Filters -->
+        <div class="filters" role="group" aria-label="Filter by category">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="roses">Roses</button>
+          <button class="filter-btn" data-filter="bouquets">Bouquets</button>
+          <button class="filter-btn" data-filter="potted">Potted</button>
+          <button class="filter-btn" data-filter="seasonal">Seasonal</button>
+        </div>
+ 
+        <!-- Products Grid -->
+        <div class="products-grid">
+          <article class="flower-card" data-category="roses">
+            <img src="./src/assets/img/red-roses.jpg" alt="Bouquet of red roses" />
+            <h3>Red Roses</h3>
+            <p>A classic bouquet of 12 red roses, a symbol of love and passion.</p>
+            <div class="card-footer">
+              <span>$25</span>
+              <button class="btn btn-small add-to-cart" data-name="Red Roses" data-price="25" data-image="./src/assets/img/red-roses.jpg">Add to Cart</button>
+            </div>
+          </article>
+ 
+          <article class="flower-card" data-category="roses">
+            <img src="./src/assets/img/white-roses.avif" alt="White roses" />
+            <h3>White Roses</h3>
+            <p>Elegant white roses, perfect for formal occasions and weddings.</p>
+            <div class="card-footer">
+              <span>$23</span>
+              <button class="btn btn-small add-to-cart" data-name="White Roses" data-price="23" data-image="./src/assets/img/white-roses.jpg">Add to Cart</button>
+            </div>
+          </article>
+ 
+          <article class="flower-card" data-category="bouquets">
+            <img src="./src/assets/img/spring-bouquet.jfif" alt="Mixed spring bouquet" />
+            <h3>Spring Bouquet</h3>
+            <p>A colorful mix of seasonal flowers in soft pastel tones.</p>
+            <div class="card-footer">
+              <span>$18</span>
+              <button class="btn btn-small add-to-cart" data-name="Spring Bouquet" data-price="18" data-image="./src/assets/img/mixed-bouquet.jpg">Add to Cart</button>
+            </div>
+          </article>
+ 
+          <article class="flower-card" data-category="bouquets">
+            <img src="./src/assets/img/tulips.jpg" alt="Bouquet of pink tulips" />
+            <h3>Pink Tulips</h3>
+            <p>Fresh and cheerful tulips for a beautiful everyday gift.</p>
+            <div class="card-footer">
+              <span>$20</span>
+              <button class="btn btn-small add-to-cart" data-name="Pink Tulips" data-price="20" data-image="./src/assets/img/tulips.jpg">Add to Cart</button>
+            </div>
+          </article>
+ 
+          <article class="flower-card" data-category="potted">
+            <img src="./src/assets/img/potted-orchid.jfif" alt="Potted orchid" />
+            <h3>Potted Orchid</h3>
+            <p>A long-lasting orchid that brings elegance to any home.</p>
+            <div class="card-footer">
+              <span>$21</span>
+              <button class="btn btn-small add-to-cart" data-name="Potted Orchid" data-price="21" data-image="./src/assets/img/orchid.jpg">Add to Cart</button>
+            </div>
+          </article>
+ 
+          <article class="flower-card" data-category="potted">
+            <img src="./src/assets/img/mini-succulent.jfif" alt="Potted succulent" />
+            <h3>Mini Succulent</h3>
+            <p>A compact, low-maintenance plant that fits any space.</p>
+            <div class="card-footer">
+              <span>$8</span>
+              <button class="btn btn-small add-to-cart" data-name="Mini Succulent" data-price="8" data-image="./src/assets/img/succulent.jpg">Add to Cart</button>
+            </div>
+          </article>
+ 
+          <article class="flower-card" data-category="seasonal">
+            <img src="./src/assets/img/sunflowers.jpg" alt="Bouquet of sunflowers" />
+            <h3>Sunflowers</h3>
+            <p>Bright sunflowers that bring warmth and happiness anywhere.</p>
+            <div class="card-footer">
+              <span>$16</span>
+              <button class="btn btn-small add-to-cart" data-name="Sunflowers" data-price="16" data-image="./src/assets/img/sunflowers.jpg">Add to Cart</button>
+            </div>
+          </article>
+ 
+          <article class="flower-card" data-category="seasonal">
+            <img src="./src/assets/img/peony.jfif" alt="Bouquet of peonies" />
+            <h3>Peonies</h3>
+            <p>Lush seasonal peonies with a delicate scent and rich color.</p>
+            <div class="card-footer">
+              <span>$28</span>
+              <button class="btn btn-small add-to-cart" data-name="Peonies" data-price="28" data-image="./src/assets/img/peonies.jpg">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+ 
+        <p class="no-results" hidden>No flowers found in this category.</p>
+      </section>
+    </main>
+ 
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <h2>The Flower Room</h2>
+        <p>Flowers for every special moment.</p>
+      </div>
+ 
+      <p>&copy; 2026 The Flower Room. All rights reserved.</p>
+    </footer>
+ 
+    <script src="./src/app.js" defer></script>
+    <script src="./src/cart.js" defer></script>
+  </body>
+</html>
+ 
